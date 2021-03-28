@@ -1,15 +1,16 @@
 package Models
 
-class Pessoa {
-    var nome :String = "renato"
-    var cpf: String = "05441447784"
+class Pessoa(nome: String, cpf: String , cidade: String) {
 
+    var _nome : String = nome
+    var _cpf: String = cpf
+    var _cidade: String = cidade
 
-    inner class Endereco
+    inner class Endereco()
     {
-        var completo  = "BRASILIA"
+        var completo  =  _cidade
     }
 
 
-    override fun toString(): String =  "Nome => ${nome} Cpf => ${cpf} - Endereco => ${this.Endereco().completo}"
+    override fun toString(): String =  "Nome => ${_nome} Cpf => ${_cpf} - Endereco => ${this.Endereco().completo}"
 }
