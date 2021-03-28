@@ -2,7 +2,7 @@ package Models
 
 import org.jetbrains.annotations.NotNull
 
-class Pessoa(nome: String, cpf: String , cidade: String) {
+class Pessoa(nome: String, cpf: String , tipoPessoa: TipoPessoa, cidade: String) {
 
     @NotNull
     var _nome : String =  if(nome.isNullOrBlank()) throw IllegalArgumentException("Name cannot be blank") else nome
@@ -13,6 +13,8 @@ class Pessoa(nome: String, cpf: String , cidade: String) {
     @NotNull
     var _cidade: String = cidade
 
+    var _tipoPessoa: TipoPessoa = tipoPessoa
+
 
     inner class Endereco()
     {
@@ -20,5 +22,5 @@ class Pessoa(nome: String, cpf: String , cidade: String) {
     }
 
 
-    override fun toString(): String =  "Nome => ${_nome} Cpf => ${_cpf} - Endereco => ${this.Endereco().completo}"
+    override fun toString(): String =  "Nome => ${_nome} Cpf => ${_cpf} - Tipo => ${_tipoPessoa} - Endereco => ${this.Endereco().completo}"
 }
