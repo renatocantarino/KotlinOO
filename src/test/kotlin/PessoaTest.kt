@@ -10,14 +10,14 @@ class PessoaTest {
     @Test
     fun CriaPessoaBrasilia()
     {
-        val pessoa = Pessoa("renato", "01185983171" , "Brasilia")
+        val pessoa = Pessoa("renato", "0118598344" , "Brasilia")
         Assertions.assertEquals("Brasilia", pessoa._cidade)
     }
 
     @Test
     fun PessoaSemNomeErro()
     {
-        val exception = assertFailsWith<IllegalArgumentException> {  val pessoa = Pessoa("", "01185983171" , "Brasilia") }
+        val exception = assertFailsWith<IllegalArgumentException> {  val pessoa = Pessoa("", "0118598344" , "Brasilia") }
         assertEquals("Name cannot be blank", exception.message)
     }
 
