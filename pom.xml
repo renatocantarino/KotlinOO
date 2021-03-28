@@ -84,6 +84,12 @@
             <artifactId>kotlin-stdlib-jdk8</artifactId>
             <version>1.4.31</version>
         </dependency>
+        <dependency>
+            <groupId>org.jetbrains.kotlin</groupId>
+            <artifactId>kotlin-script-runtime</artifactId>
+            <version>RELEASE</version>
+            <scope>test</scope>
+        </dependency>
     </dependencies>
 
 </project>

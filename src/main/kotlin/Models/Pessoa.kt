@@ -6,6 +6,7 @@ class Pessoa(nome: String, cpf: String , cidade: String) {
     var _cpf: String = cpf
     var _cidade: String = cidade
 
+
     inner class Endereco()
     {
         var completo  =  _cidade
