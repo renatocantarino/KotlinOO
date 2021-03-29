@@ -14,4 +14,8 @@ abstract class Funcionario(
 
    protected abstract fun  CalculaAuxilioAlimentacao(): Double
 
+    override fun toString(): String {
+        return "${nome}  ${salario}"
+    }
+
 }
