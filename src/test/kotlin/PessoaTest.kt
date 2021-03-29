@@ -1,4 +1,4 @@
-import Models.Pessoa
+import Models.Analista
 import Models.TipoPessoa
 import org.junit.jupiter.api.Assertions
 import org.junit.jupiter.api.Test
@@ -9,23 +9,23 @@ import kotlin.test.assertFailsWith
 class PessoaTest {
 
     @Test
-    fun CriaPessoaBrasilia()
+    fun CriaAnalistaPessoaBrasilia()
     {
-        val pessoa = Pessoa("renato", "0118598344" , TipoPessoa.PJ,  "Brasilia")
-        Assertions.assertEquals("Brasilia", pessoa._cidade)
+        val pessoa = Analista( "01551" , 12225.00,  "Renato" , "055448877451" , TipoPessoa.PF, "BRASILIA")
+        Assertions.assertEquals("Brasilia", pessoa.cidade)
     }
 
     @Test
-    fun PessoaSemNomeErro()
+    fun AnalistaSemNomeErro()
     {
-        val exception = assertFailsWith<IllegalArgumentException> {  val pessoa = Pessoa("", "0118598344" ,  TipoPessoa.PJ, "Brasilia") }
+        val exception = assertFailsWith<IllegalArgumentException> {  val pessoa = Analista( "01551" , 12225.00,  "Renato" , "055448877451" , TipoPessoa.PF, "BRASILIA")}
         assertEquals("Name cannot be blank", exception.message)
     }
 
     @Test
-    fun PessoaSemCpfErro()
+    fun AnalistaSemCpfErro()
     {
-        val exception = assertFailsWith<IllegalArgumentException> {  val pessoa = Pessoa("renato", "" ,  TipoPessoa.PJ,  "Brasilia") }
+        val exception = assertFailsWith<IllegalArgumentException> {  val pessoa = Analista( "01551" , 12225.00,  "Renato" , "055448877451" , TipoPessoa.PF, "BRASILIA") }
         assertEquals("Cpf cannot be blank", exception.message)
     }
 }

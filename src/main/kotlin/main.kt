@@ -1,5 +1,5 @@
+import Models.Analista
 import Models.Banco
-import Models.Pessoa
 import Models.TipoPessoa
 
 class Main {
@@ -14,7 +14,8 @@ class Main {
 
 
             println(dtclass2)
-            println(Pessoa("Renato" , "055448877451" , TipoPessoa.PF, "BRASILIA").toString())
+            val analista = Analista( "01551" , 12225.00,  "Renato" , "055448877451" , TipoPessoa.PF, "BRASILIA")
+            println(analista.matricula)
         }
     }
 }
